@@ -1,0 +1,6 @@
+CREATE TABLE files
+(
+    name character varying NOT NULL,
+    password character varying NOT NULL,
+    PRIMARY KEY (name)
+);

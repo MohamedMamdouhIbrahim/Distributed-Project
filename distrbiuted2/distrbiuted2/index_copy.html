@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--this is the view in mvc-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="files/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.quilljs.com/1.3.6/quill.snow.css">
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+        integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k"
+        crossorigin="anonymous"></script>
+    <script src="model.js" type="text/javascript">
+
+    </script>
+    <title>Distributed Editor</title>
+    <style>
+        a,
+        a:visited,
+        a:link {
+            cursor: pointer;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        body {
+            padding-top: 70px;
+        }
+
+        select,
+        input {
+            width: 16rem;
+            padding: 1px;
+        }
+
+        #txt_editor {
+            width: 100%;
+            height: 480px;
+            display: block;
+            box-sizing: border-box;
+            background: #FAFBF9;
+            margin-top: 1rem;
+        }
+
+        body {
+            background: black;
+            font-family: 'Ubuntu', sans-serif;
+            color: gray;
+
+        }
+
+        body>div {
+            padding: 10px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div style="display: flex; justify-content: space-between;">
+            <h1>Distributed Text Editor</h1>
+            <p>number of people connected <span id="connected">1</span></p>
+        </div>
+        <hr>
+        <div style="display: flex; gap:1rem">
+            <form id="connect">
+                <select id="connect_id" type="text" required></select>
+                <input id="password" type="text" required  placeholder="Password"/>
+                <button type="submit">connect</button>
+            </form>
+            <a id="save">Save</a>
+            <a id="download">download</a>
+
+            <a id="share">Share</a>
+            <div id="id"></div>
+
+        </div>
+
+        <div>
+            <div id="txt_editor"></div>
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>
